@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1><font color='#582014'> &#9749; Brew</font> Coffee </h1>
+  <h5>  <font color='#582014'>Working</font> Smart Coffee Maker Coffee </h5>
+  <ul>
+    {% for device in working_devices  %}
+    <li>
+      <p> {{device}} &#x23F3; </p>
+    </li>
+    {% endfor %}
+  </ul>
+  <form method="POST">
+      {# This hidden_tag is a CSRF security feature. #}
+      {{ form.hidden_tag() }}
+      {{ form.brew_menu.label }}  {{form.brew_menu()}}
+      {{ form.brew_device.label }}  {{form.brew_device()}}
+      {{ form.submit() }}
+  </form>
+
+</div>
+<!-- <img src="assets/bean.png" alt="..." class="img-thumbnail"> -->
+{% endblock %}

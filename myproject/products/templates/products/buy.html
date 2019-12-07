@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1><font color='#582014'>LIMITED</font> Edition Set </h1>
+  <form method="POST">
+      {# This hidden_tag is a CSRF security feature. #}
+      {{ form.hidden_tag() }}
+      {{ form.select_product.label }}  {{form.select_product()}}
+      {{ form.submit() }}
+  </form>
+</div>
+{% endblock %}

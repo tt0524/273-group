@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>&#128203; All registered devices</h1>
+  <ul>
+    {% for device in devices  %}
+    <li>{{device}}
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Observation
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Notify
+        </label>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

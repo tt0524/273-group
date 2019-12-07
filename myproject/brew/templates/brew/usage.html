@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h3>&hearts; Your Favorite Coffee &hearts;</h3>
+  <p><font color='#582014'>{{top1}}</font></p>
+  <h3>&#9827; Recently Tasted &#9827;</h3>
+  <p><font color='#582014'>{{recent}}</font></p>
+  <h3>&#10022; History &#10022;</h3>
+  <ul>
+    {% for brewevent in brewevents  %}
+    <li>
+      <p> {{brewevent}} </p>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
